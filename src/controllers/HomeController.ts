@@ -1,5 +1,6 @@
 import type { Request, Response } from 'express';
-import { books } from '../data/Books.js'; 
+import { books } from '../data/Books.js';
+import { Book } from '../models/Book.js'; 
 
 export class HomeController {
     static index(req: Request, res: Response): void {
@@ -24,5 +25,10 @@ export class HomeController {
         const viewData: any = {};
         viewData["books"] = books;
         res.render('home/books', viewData); 
+    }
+
+    static show(req: any, res: any){
+        const book = Book.findById(books, parseInt(req.params.id));
+        res.render('home/show', { book: book })
     }
 }
