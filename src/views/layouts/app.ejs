@@ -34,6 +34,11 @@
 <span>Contact</span>
 </a> 
 
+<a href="/main-point" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-700 transition duration-200">
+    <i class="fas fa-book mr-3"></i>
+    <span>Books</span>
+</a> 
+
 </nav>
 
 </div>
@@ -73,13 +78,11 @@
 <div class="px-6 py-4 flex items-center justify-between">
 
 <div>
-
-<h1 class="text-2xl font-bold text-gray-800">
-
-<%= viewData.title %>
-
-</h1>
-
+    <h1 class="text-2xl font-bold text-gray-800">
+        <% if (typeof viewData !== 'undefined') { %>
+            <%= viewData.title %>
+        <% } %>
+    </h1>
 </div>
 
 <div class="flex items-center space-x-4">
