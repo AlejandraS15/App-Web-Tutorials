@@ -1,4 +1,4 @@
-import { Book } from "../models/Book.js";
+import { Book } from "../models/BookModel.js";
 
 export const books: Book[] = [
     new Book(1, "The Great Gatsby", "Fiction", 12.99, 3),

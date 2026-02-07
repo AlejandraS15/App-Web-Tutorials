@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { HomeController } from '../controllers/HomeController.js';
+import { BookController } from "../controllers/BookController.js";
 
 export default class Routes {
     static initializeRoutes(): Router {
@@ -8,8 +9,8 @@ export default class Routes {
         router.get('/', HomeController.index);
         router.get('/about', HomeController.about);
         router.get('/contact', HomeController.contact);
-        router.get('/main-point', HomeController.Main_Point);
-        router.get('/books/:id', HomeController.show); 
+        router.get('/books', BookController.index); 
+        router.get('/books/:id', BookController.show); 
         return router; 
     }
 }
