@@ -6,4 +6,4 @@
       <h2 class="text-3xl font-bold text-gray-800 text-center">Contact Page</h2>
     </div>
   </section>
-</template> 
+</template>
