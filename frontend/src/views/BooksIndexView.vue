@@ -8,10 +8,15 @@ const books = ref<BookInterface[]>([]);
 onMounted(async () => {
   books.value = await BookService.getBooks();
 });
-</script>
 
-<template>
-  <section>
+</script> 
+
+ 
+
+<template> 
+
+  <section> 
+
     <div class="max-w-7xl mx-auto">
       <div class="flex justify-end mb-6">
         <RouterLink

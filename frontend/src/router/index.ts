@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '@/views/HomeView.vue';
 import AboutView from '@/views/AboutView.vue';
 import ContactView from '@/views/ContactView.vue';
-import BooksIndexView from '@/views/BooksIndexView.vue';
+import BooksIndexView from '@/views/BooksIndexView.vue'; 
 import BooksShowView from '@/views/BooksShowView.vue';
 import BooksCreateView from '@/views/BooksCreateView.vue';
 
@@ -12,15 +12,10 @@ const router = createRouter({
     { path: '/', name: 'home', component: HomeView, meta: { title: 'Home' } },
     { path: '/about', name: 'about', component: AboutView, meta: { title: 'About' } },
     { path: '/contact', name: 'contact', component: ContactView, meta: { title: 'Contact' } },
-    { path: '/books', name: 'books', component: BooksIndexView, meta: { title: 'Books' } },
+    { path: '/books', name: 'books', component: BooksIndexView, meta: { title: 'Books' } }, 
     { path: '/books/:id', name: 'book', component: BooksShowView, meta: { title: 'Book' } },
-    {
-      path: '/books/create',
-      name: 'books.create',
-      component: BooksCreateView,
-      meta: { title: 'Create Book' },
-    },
+    { path: '/books/create', name: 'books.create', component: BooksCreateView, meta: { title: 'Create Book' } },
   ],
 });
 
-export default router;
+export default router; 
