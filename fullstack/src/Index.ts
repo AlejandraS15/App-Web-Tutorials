@@ -20,7 +20,7 @@ class Index {
         app.use(Routes.initializeRoutes());
 
         app.listen(PORT, () => {
-            console.log(`Server running on http://localhost:${PORT}`);
+            console.log(`Server running on http://35.188.175.249:${PORT}`);
         });
     }
 }
